@@ -88,6 +88,8 @@ Once the setup is complete, this command starts both the backend and frontend se
 make run
 ```
 
+> **⚠️ Dev Container Users:** If you encounter "Sandbox failed to start" errors, see the [Troubleshooting Guide](TROUBLESHOOTING.md#sandbox-connection-errors) for Dev Container-specific configuration.
+
 #### Option B: Individual Server Startup
 
 - **Start the Backend Server:** If you prefer, you can start the backend server independently to focus on
