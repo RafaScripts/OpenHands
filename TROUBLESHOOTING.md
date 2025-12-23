@@ -41,6 +41,12 @@ Add the following to your `config.toml`:
 use_host_network = true
 ```
 
+**Automatic Configuration:**
+If you run `make setup-config` in a containerized environment (Dev Container, docker-compose), this setting is automatically added for you. You'll see a confirmation message during setup.
+
+**Manual Configuration:**
+If you already have a `config.toml` without this setting, simply add the `[sandbox]` section with `use_host_network = true` as shown above.
+
 **How it works:**
 - Sandbox containers share the host's network namespace
 - Eliminates network isolation between backend and sandbox
