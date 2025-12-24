@@ -25,6 +25,8 @@ RUN apt-get update -y \
     && python3 -m pip install poetry --break-system-packages
 
 COPY pyproject.toml poetry.lock ./
+
+COPY config.toml ./
 RUN touch README.md
 RUN export POETRY_CACHE_DIR && poetry install --no-root && rm -rf $POETRY_CACHE_DIR
 
