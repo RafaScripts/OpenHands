@@ -346,7 +346,7 @@ class DockerSandboxService(SandboxService):
                 working_dir=sandbox_spec.working_dir,
                 labels=labels,
                 detach=True,
-                extra_hosts={'host.docker.internal': 'host-gateway'},  # type: ignore[arg-type]
+                network_mode='host',
             )
 
             sandbox_info = await self._container_to_sandbox_info(container)
